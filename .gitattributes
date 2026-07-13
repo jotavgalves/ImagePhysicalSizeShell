@@ -1,0 +1,7 @@
+*.cmd text eol=crlf
+*.ps1 text
+*.zip binary
+*.dll binary
+*.exe binary
+*.lib binary
+*.exp binary

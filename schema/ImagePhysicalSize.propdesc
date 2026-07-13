@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://schemas.microsoft.com/windows/2006/propertydescription"
+        schemaVersion="1.0">
+  <propertyDescriptionList publisher="ImagePhysicalSizeShell" product="ImagePhysicalSizeShell">
+    <propertyDescription name="ImagePhysicalSizeShell.PhysicalWidthCm" formatID="{7A4E8B66-6C8A-421D-9868-42F50F9312B4}" propID="2">
+      <description>Largura física calculada em centímetros usando o DPI incorporado.</description>
+      <searchInfo inInvertedIndex="false" isColumn="true" columnIndexType="NotIndexed" />
+      <typeInfo type="Double" isInnate="true" multipleValues="false" isViewable="true" isQueryable="true" conditionType="Number" />
+      <labelInfo label="Largura física" />
+      <displayInfo displayType="Number" alignment="Right" defaultColumnWidth="14">
+        <numberFormat formatAs="General" />
+      </displayInfo>
+    </propertyDescription>
+
+    <propertyDescription name="ImagePhysicalSizeShell.PhysicalHeightCm" formatID="{7A4E8B66-6C8A-421D-9868-42F50F9312B4}" propID="3">
+      <description>Altura física calculada em centímetros usando o DPI incorporado.</description>
+      <searchInfo inInvertedIndex="false" isColumn="true" columnIndexType="NotIndexed" />
+      <typeInfo type="Double" isInnate="true" multipleValues="false" isViewable="true" isQueryable="true" conditionType="Number" />
+      <labelInfo label="Altura física" />
+      <displayInfo displayType="Number" alignment="Right" defaultColumnWidth="14">
+        <numberFormat formatAs="General" />
+      </displayInfo>
+    </propertyDescription>
+
+    <propertyDescription name="ImagePhysicalSizeShell.PhysicalSizeCm" formatID="{7A4E8B66-6C8A-421D-9868-42F50F9312B4}" propID="4">
+      <description>Tamanho físico calculado em centímetros usando o DPI incorporado.</description>
+      <searchInfo inInvertedIndex="false" isColumn="true" columnIndexType="NotIndexed" />
+      <typeInfo type="String" isInnate="true" multipleValues="false" isViewable="true" isQueryable="true" conditionType="String" />
+      <labelInfo label="Tamanho físico" />
+      <displayInfo displayType="String" alignment="Left" defaultColumnWidth="22" />
+    </propertyDescription>
+
+    <propertyDescription name="ImagePhysicalSizeShell.EmbeddedDpiX" formatID="{7A4E8B66-6C8A-421D-9868-42F50F9312B4}" propID="5">
+      <description>Resolução horizontal física incorporada.</description>
+      <searchInfo inInvertedIndex="false" isColumn="true" columnIndexType="NotIndexed" />
+      <typeInfo type="Double" isInnate="true" multipleValues="false" isViewable="true" isQueryable="true" conditionType="Number" />
+      <labelInfo label="DPI incorporado X" />
+      <displayInfo displayType="Number" alignment="Right" defaultColumnWidth="14">
+        <numberFormat formatAs="General" />
+      </displayInfo>
+    </propertyDescription>
+
+    <propertyDescription name="ImagePhysicalSizeShell.EmbeddedDpiY" formatID="{7A4E8B66-6C8A-421D-9868-42F50F9312B4}" propID="6">
+      <description>Resolução vertical física incorporada.</description>
+      <searchInfo inInvertedIndex="false" isColumn="true" columnIndexType="NotIndexed" />
+      <typeInfo type="Double" isInnate="true" multipleValues="false" isViewable="true" isQueryable="true" conditionType="Number" />
+      <labelInfo label="DPI incorporado Y" />
+      <displayInfo displayType="Number" alignment="Right" defaultColumnWidth="14">
+        <numberFormat formatAs="General" />
+      </displayInfo>
+    </propertyDescription>
+
+    <propertyDescription name="ImagePhysicalSizeShell.DpiSource" formatID="{7A4E8B66-6C8A-421D-9868-42F50F9312B4}" propID="7">
+      <description>Origem dos metadados físicos usados para o DPI.</description>
+      <searchInfo inInvertedIndex="false" isColumn="true" columnIndexType="NotIndexed" />
+      <typeInfo type="String" isInnate="true" multipleValues="false" isViewable="true" isQueryable="true" conditionType="String" />
+      <labelInfo label="Origem da resolução" />
+      <displayInfo displayType="String" alignment="Left" defaultColumnWidth="20" />
+    </propertyDescription>
+
+    <propertyDescription name="ImagePhysicalSizeShell.DpiStatus" formatID="{7A4E8B66-6C8A-421D-9868-42F50F9312B4}" propID="8">
+      <description>Estado da resolução física incorporada.</description>
+      <searchInfo inInvertedIndex="false" isColumn="true" columnIndexType="NotIndexed" />
+      <typeInfo type="String" isInnate="true" multipleValues="false" isViewable="true" isQueryable="true" conditionType="String" />
+      <labelInfo label="Status do DPI" />
+      <displayInfo displayType="String" alignment="Left" defaultColumnWidth="26" />
+    </propertyDescription>
+  </propertyDescriptionList>
+</schema>

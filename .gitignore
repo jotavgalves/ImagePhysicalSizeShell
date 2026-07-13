@@ -1,0 +1,26 @@
+# Build outputs
+/build/
+/out/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+
+# Local generated installer dry-runs and reports
+/install-dry-run/
+/rollback-dry-run/
+
+# Visual Studio and editor state
+/.vs/
+/.vscode/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini
+

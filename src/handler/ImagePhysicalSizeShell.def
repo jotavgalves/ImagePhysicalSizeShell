@@ -1,0 +1,7 @@
+LIBRARY "ImagePhysicalSizeShell"
+
+EXPORTS
+    DllCanUnloadNow
+    DllGetClassObject
+    DllRegisterServer
+    DllUnregisterServer

@@ -1,0 +1,50 @@
+ImagePhysicalSizeShell
+======================
+
+Instalação rápida
+-----------------
+
+1. Extraia este ZIP em uma pasta local.
+2. Clique com o botao direito em instalar.cmd.
+3. Escolha "Executar como administrador".
+4. Aceite o UAC.
+
+O instalador copia os arquivos para:
+
+  C:\Program Files\ImagePhysicalSizeShell\
+
+O mini app fica em:
+
+  C:\Program Files\ImagePhysicalSizeShell\ipsconfigui.exe
+
+Formatos ativados no Explorer
+-----------------------------
+
+- PNG
+- JPG/JPEG
+- TIF/TIFF
+
+SVG e PDF ainda não são ativados no Explorer neste pacote.
+
+Rollback seguro
+---------------
+
+Se precisar desfazer:
+
+1. Execute rollback-emergencia.cmd como administrador; ou
+2. Execute:
+
+   powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Program Files\ImagePhysicalSizeShell\rollback.ps1"
+
+O backup fica em:
+
+  C:\ProgramData\ImagePhysicalSizeShell\backup\
+
+Comando de instalacao via download
+----------------------------------
+
+Depois que este ZIP estiver hospedado em uma URL, use este modelo em CMD:
+
+  powershell -NoProfile -ExecutionPolicy Bypass -Command "$u='COLE_A_URL_DO_ZIP_AQUI'; $z=\"$env:TEMP\ImagePhysicalSizeShell.zip\"; $d=\"$env:TEMP\ImagePhysicalSizeShell\"; Invoke-WebRequest $u -OutFile $z; if(Test-Path $d){Remove-Item $d -Recurse -Force}; Expand-Archive $z $d -Force; Start-Process -FilePath (Join-Path $d 'ImagePhysicalSizeShell\instalar.cmd') -Verb RunAs"
+
+Troque COLE_A_URL_DO_ZIP_AQUI pelo link real do ZIP.
