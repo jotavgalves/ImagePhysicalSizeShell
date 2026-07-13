@@ -666,6 +666,21 @@ function Remove-ProjectRegistryKeysIfEmpty {
     }
 }
 
+function ConvertTo-RegistryProviderPathFromRegExeKey {
+    param([Parameter(Mandatory)][string]$RegExeKey)
+
+    if ($RegExeKey.StartsWith("HKLM\")) {
+        return "Registry::HKEY_LOCAL_MACHINE\" + $RegExeKey.Substring(5)
+    }
+    if ($RegExeKey.StartsWith("HKCU\")) {
+        return "Registry::HKEY_CURRENT_USER\" + $RegExeKey.Substring(5)
+    }
+    if ($RegExeKey.StartsWith("HKCR\")) {
+        return "Registry::HKEY_CLASSES_ROOT\" + $RegExeKey.Substring(5)
+    }
+    throw "Unsupported registry export root: $RegExeKey"
+}
+
 function Export-RegistrySnapshotFiles {
     param(
         [Parameter(Mandatory)][string]$OutDir,
@@ -681,7 +696,17 @@ function Export-RegistrySnapshotFiles {
     )
     foreach ($target in $targets) {
         $path = Join-Path $OutDir $target.file
-        $null = & reg.exe export $target.key $path /y 2>$null
+        $providerPath = ConvertTo-RegistryProviderPathFromRegExeKey -RegExeKey $target.key
+        if (-not (Test-Path -LiteralPath $providerPath)) {
+            "Registry key did not exist during snapshot: $($target.key)" |
+                Set-Content -LiteralPath "$path.missing.txt" -Encoding UTF8
+            continue
+        }
+
+        $output = & reg.exe export $target.key $path /y 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            throw "Registry export failed for $($target.key). Output: $output"
+        }
     }
 }
 

@@ -1,7 +1,7 @@
 {
   "package": "C:\\Users\\CRIACAO\\Documents\\Codex\\2026-07-13\\pesquise-para-mim-uma-forma-de\\outputs\\ImagePhysicalSizeShell-setup-windows-x64.zip",
-  "sha256": "85286A312E7C14E6095F1FFBD6E5961E8BAC7F4D36E3C1EA1BDC834BFF1A791B",
-  "bytes": 242269,
-  "createdAt": "2026-07-13T15:18:31.1421512-03:00",
-  "fix": "cmd files converted to ASCII CRLF; installer opens config UI"
+  "sha256": "3FDCF3DE5E8BCF78821BE59659A6B54C8974B60B3CF4675CCCFBBD02732D24A7",
+  "bytes": 242428,
+  "createdAt": "2026-07-13T15:25:08.1112843-03:00",
+  "fix": "missing registry snapshot keys no longer abort installation"
 }
